@@ -1,0 +1,34 @@
+projectType: java-maven
+agentLabel: jslave-inbound
+
+appName: java-web-app
+imageName: java-web-app
+
+javaVersion: "17"
+artifactType: "war"
+artifactFile: "target/java-web-app.war"
+
+sonarProjectKey: "java-web-app"
+sonarProjectName: "java-web-app"
+sonarServer: "jcloudcodes-sonarqube"
+
+nexusUrl: "http://nexus.jcloudcodes.com"
+nexusRawRepo: "java-web-app"
+nexusCredId: "jcloudcodes-nexus-cred"
+
+dockerRegistry: "nexus.jcloudcodes.com:20080"
+dockerRepo: "java-web-app"
+dockerCredId: "jcloudcodes-nexus-cred"
+
+dockerhubNamespace: "jcloudcodes"
+dockerhubCredId: "jcloudcodes-dockerhub-cred"
+
+gitopsRepoUrl: "https://github.com/jcloudcodes/jcloud_argocd.git"
+gitopsRepoBranch: "main"
+gitopsRepoDir: "helm-gitops"
+
+argocdServer: "argocd.jcloudcodes.com"
+argocdApps:
+  lab1: "java-web-app-dev"
+  qa: "java-web-app-qa"
+  prod: "java-web-app-prod"
