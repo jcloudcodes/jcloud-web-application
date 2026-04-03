@@ -1,3 +1,3 @@
-@Library('jcloudcodes-shared-library@main') _
+@Library('jcloudcodes_shared_libraries@main') _
 
 pipelineEntry()
